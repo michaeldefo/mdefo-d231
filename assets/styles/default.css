@@ -35,12 +35,20 @@ header {
     color: #fff;
 }
 
+nav {
+    width: 200px; /* optionnel */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
+    flex-direction: column;   /* Passe le menu en vertical */
+    align-items: flex-start;  /* Aligne les éléments à gauche */
+    gap: 10px;                /* Espacement vertical */
 }
+
 
 nav a {
     color: #dcdcdc;
