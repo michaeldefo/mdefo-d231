@@ -32,7 +32,7 @@ section {}
 header {
     background: #1e1e1e;
     padding: 20px;
-    color: #fff;
+    color: #968181;
 }
 
 nav {
@@ -56,10 +56,11 @@ nav a {
     font-family: "Fira Code", monospace;
 }
 
-header img {
+header p img {
     color: #dcdcdc;
     text-decoration: none;
     font-family: "Fira Code", monospace;
+    position: center;
 }
 
 footer {
