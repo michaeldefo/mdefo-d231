@@ -35,10 +35,6 @@ header {
     color: #968181;
 }
 
-nav {
-    width: 200px; /* optionnel */
-}
-
 nav ul {
     list-style: none;
     padding: 0;
