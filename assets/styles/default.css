@@ -40,9 +40,8 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;   /* Passe le menu en vertical */
-    align-items: flex-start;  /* Aligne les éléments à gauche */
     gap: 10px;                /* Espacement vertical */
+    border: 1px solid burlywood;
 }
 
 
