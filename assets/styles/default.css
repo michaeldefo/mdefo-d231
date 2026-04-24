@@ -13,6 +13,7 @@ body {
         "header"
         "menu"
         "content"
+        "nav"
         "footer";
 
     height: 100vh;
@@ -78,6 +79,7 @@ aside {
 }
 
 .nav {
+    grid-area: nav;
     width: 250px;                 /* largeur du cadre */
     margin: 20px auto;            /* centré horizontalement */
     padding: 20px;
