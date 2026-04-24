@@ -1,19 +1,19 @@
 body {
-    margin: 2px;
+    margin: 0;
     display: grid;
 
-    /* 3 lignes : header / contenu / footer */
-    grid-template-rows: 80px 1fr 60px;
+    /* 4 lignes : header / bannière / contenu / footer */
+    grid-template-rows: 80px 120px 1fr 60px;
 
-    /* 2 colonnes : menu / contenu */
-    grid-template-columns: 220px 1fr;
+    /* 1 colonne */
+    grid-template-columns: 1fr;
 
-    /* Placement des zones */
+    /* Définition des zones */
     grid-template-areas:
-        "header header header"
-        "menu menu menu"
-        "aside aside aside"
-        "footer footer footer";
+        "header"
+        "menu"
+        "content"
+        "footer";
 
     height: 100vh;
 }
