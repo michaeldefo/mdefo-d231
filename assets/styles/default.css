@@ -10,9 +10,10 @@ body {
 
     /* Placement des zones */
     grid-template-areas:
-        "header header"
-        "menu   main"
-        "footer footer";
+        "header header header"
+        "menu menu menu"
+        "aside aside aside"
+        "footer footer footer";
 
     height: 100vh;
 }
@@ -45,4 +46,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;          /* espace entre les éléments */
+    list-style: none;   /* retire les puces */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    white-space: nowrap; /* empêche le retour à la ligne */
 }
