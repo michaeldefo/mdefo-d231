@@ -3,8 +3,7 @@ body {
     display: grid;
 
     /* 5 lignes : header / menu / contenu / nav / footer */
-    grid-template-rows: 80px 60px 1fr 120px 60px;
-
+    grid-template-rows: 70px 50px 1fr 100px 50px;
     grid-template-columns: 1fr;
 
     grid-template-areas:
@@ -16,9 +15,9 @@ body {
 
     height: 100vh;
 
-    /* espace blanc entre les zones */
-    row-gap: 20px;
-    padding: 20px; /* espace entre les zones et les bords de l’écran */
+    /* espace uniforme entre zones */
+    row-gap: 15px;
+    padding: 15px; /* espace entre zones et bords */
     box-sizing: border-box;
 }
 
@@ -29,18 +28,17 @@ header {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center; /* centré */
-    /*padding: 10px 0px;*/
+    justify-content: center;
+    padding: 10px;
 }
 
-/* MENU (barre horizontale) */
+/* MENU */
 nav {
     grid-area: menu;
     background: #f4f4f4;
-    /*padding: 10px 10px; */
+    padding: 10px;
 }
 
-/* MENU SUR UNE LIGNE */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -54,10 +52,45 @@ nav ul li {
     white-space: nowrap;
 }
 
-/* CONTENU PRINCIPAL */
+/* CONTENU */
 main {
     grid-area: content;
-    /*padding: 10px;*/
+    padding: 10px;
+}
+
+/* NAVIGATION (cadre pleine largeur) */
+.nav {
+    grid-area: nav;
+    background: #eaeaea;
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.nav p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
 /* FOOTER */
@@ -68,55 +101,5 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* ASIDE (si tu veux l'utiliser plus tard) */
-aside {
-    grid-area: aside;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav {
-    grid-area: nav;
-    background: #eaeaea;
-    border: 1px solid #333;
-    border-radius: 10px;
-
-    /* occupe toute la largeur */
-    width: 100%;
-
-    /* espace interne */
-    /*padding: 10px;*/
-
-    /* contenu centré */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-
-/* Titre centré */
-.nav h1 {
-    margin: 0;
-    text-align: center;
-}
-
-
-/* Ligne contenant flèche + lien + texte */
-.nav p {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-/* Style du lien */
-.nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    padding: 10px;
 }
