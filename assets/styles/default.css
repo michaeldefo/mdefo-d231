@@ -1,3 +1,53 @@
+body {
+    margin: 0;
+    display: grid;
+
+    /* 3 lignes : header / contenu / footer */
+    grid-template-rows: 80px 1fr 60px;
+
+    /* 2 colonnes : menu / contenu */
+    grid-template-columns: 220px 1fr;
+
+    /* Placement des zones */
+    grid-template-areas:
+        "header header"
+        "menu   main"
+        "footer footer";
+
+    height: 100vh;
+}
+
+/* Zones */
+header {
+    grid-area: header;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menu {
+    grid-area: menu;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
@@ -25,45 +75,4 @@ h2 {
     font-style: oblique;
     border: 1px solid burlywood;
     padding: 8px 12px;
-}
-
-section {}
-
-header {
-    background: #1e1e1e;
-    padding: 20px;
-    color: #968181;
-    position: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px;                /* Espacement vertical */
-    border: 1px solid burlywood;
-}
-
-
-nav a {
-    color: #dcdcdc;
-    text-decoration: none;
-    font-family: "Fira Code", monospace;
-}
-
-header p img {
-    color: #dcdcdc;
-    text-decoration: none;
-    font-family: "Fira Code", monospace;
-    position: center;
-}
-
-footer {
-    background: #1e1e1e;
-    color: #dcdcdc;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    font-family: "Fira Code", monospace;
 }
