@@ -2,8 +2,8 @@ body {
     margin: 0;
     display: grid;
 
-    /* 4 lignes : header / bannière / contenu / footer */
-    grid-template-rows: 80px 120px 1fr 60px;
+    /* 4 lignes : header / menu / contenu / footer */
+    grid-template-rows: 80px 60px 1fr 60px;
 
     /* 1 colonne */
     grid-template-columns: 1fr;
@@ -18,27 +18,45 @@ body {
     height: 100vh;
 }
 
-/* Zones */
+/* HEADER */
 header {
     grid-area: header;
     background: #333;
     color: white;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    justify-content: center; /* centré */
+    padding: 0 20px;
 }
 
-.menu {
+/* MENU (barre horizontale) */
+nav {
     grid-area: menu;
     background: #f4f4f4;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
+/* MENU SUR UNE LIGNE */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    white-space: nowrap;
+}
+
+/* CONTENU PRINCIPAL */
 main {
-    grid-area: main;
+    grid-area: content;
     padding: 20px;
 }
 
+/* FOOTER */
 footer {
     grid-area: footer;
     background: #333;
@@ -48,22 +66,10 @@ footer {
     justify-content: center;
 }
 
+/* ASIDE (si tu veux l'utiliser plus tard) */
 aside {
     grid-area: aside;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;          /* espace entre les éléments */
-    list-style: none;   /* retire les puces */
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    white-space: nowrap; /* empêche le retour à la ligne */
 }
