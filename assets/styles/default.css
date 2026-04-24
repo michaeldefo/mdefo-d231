@@ -103,7 +103,7 @@ aside {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 10px;                    /* espace entre les éléments */
+    gap: 2px;                    /* espace entre les éléments */
 }
 
 /* Style du lien */
