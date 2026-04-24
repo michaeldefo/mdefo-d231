@@ -16,6 +16,9 @@ body {
         "footer";
 
     height: 100vh;
+
+    /* 👉 Ajout de l'espace entre les zones */
+    row-gap: 20px; /* ou gap: 20px; */
 }
 
 /* HEADER */
@@ -69,6 +72,12 @@ footer {
 /* ASIDE (si tu veux l'utiliser plus tard) */
 aside {
     grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
     display: flex;
     align-items: center;
     justify-content: center;
