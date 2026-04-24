@@ -11,6 +11,7 @@ body {
         "menu"
         "content"
         "nav"
+        "aside"
         "footer";
 
     height: 100vh;
@@ -102,4 +103,12 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 10px;
+}
+
+/* ASIDE (si tu veux l'utiliser plus tard) */
+aside {
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
