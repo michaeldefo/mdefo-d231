@@ -7,38 +7,42 @@
     <link rel="stylesheet" href="/mdefo-d231/assets/scripts/template.css">
 </head>
 
-<body>
+<body class="content-wrapper">
 
 <header>
     <button id="btn-menu">☰</button>
+
     <img src="/mdefo-d231/assets/images/MasqueTribalDevopsS.png" 
          alt="logo DevOps" class="header-logo">
-    <h1>Première Decouverte de l'Informatique & Métiers du Numérique</h1>
+
+    <h1>Première Découverte de l'Informatique & Métiers du Numérique</h1>
+
     <button id="themeToggle">🌗</button>
 </header>
 
 <nav id="menu">
     <ul>
         <li><a href="/mdefo-d231/index.html">Accueil</a></li>
-		<li><a href="/mdefo-d231/content/home.html">À Propos de Moi</a></li>
+        <li><a href="/mdefo-d231/content/home.html">À Propos de Moi</a></li>
+
         <li>Métiers
             <ul>
                 <li>DevOps
-					<ul>
-						<li><a href="/mdefo-d231/content/notions.html">Comprendre le DevOps</a></li>
-						<li><a href="/mdefo-d231/content/metiers.html">Qui peut faire du DevOps ?</a></li>
-					</ul>
-				</li>
+                    <ul>
+                        <li><a href="/mdefo-d231/content/notions.html">Comprendre le DevOps</a></li>
+                        <li><a href="/mdefo-d231/content/metiers.html">Qui peut faire du DevOps ?</a></li>
+                    </ul>
+                </li>
                 <li><span class="soon">Cybersécurité – bientôt</span></li>
                 <li><span class="soon">Développement – bientôt</span></li>
             </ul>
         </li>
-		<li><span class="soon">À propos – bientôt</span></li>
+
+        <li><span class="soon">À propos – bientôt</span></li>
         <li><a href="/mdefo-d231/content/contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<!-- 🎨 BANNIÈRE DEVOPS PERSONNALISÉE -->
 <section class="banner devops-banner">
     <h2>🔥 DevOps : Automatiser, Collaborer, Améliorer</h2>
     <p>Une culture, une méthode, un état d’esprit.</p>
@@ -52,41 +56,32 @@
 
         <div class="cards">
 
-            <!-- 🔁 CARTE DEVOPS -->
             <div class="card" onclick="scrollToSection('devops')">
                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="DevOps">
                 <h3>DevOps</h3>
                 <p>Automatisation, CI/CD, collaboration continue.</p>
             </div>
 
-            <div class="card" onclick="scrollToSection('cyber')">
+            <div class="card">
                 <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Cybersécurité">
                 <h3>Cybersécurité</h3>
-                <p>Protéger les systèmes et les données.</p>
+                <p class="soon">À venir</p>
             </div>
 
-            <div class="card" onclick="scrollToSection('dev')">
+            <div class="card">
                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Développement">
                 <h3>Développement</h3>
-                <p>Créer des applications et des services.</p>
+                <p class="soon">À venir</p>
             </div>
 
         </div>
 
-        <!-- 🌀 ANIMATION BOUCLE DEVOPS -->
         <h2>La boucle DevOps</h2>
         <div class="devops-loop">
-            <span>Plan</span>
-            <span>Code</span>
-            <span>Build</span>
-            <span>Test</span>
-            <span>Release</span>
-            <span>Deploy</span>
-            <span>Operate</span>
-            <span>Monitor</span>
+            <span>Plan</span><span>Code</span><span>Build</span><span>Test</span>
+            <span>Release</span><span>Deploy</span><span>Operate</span><span>Monitor</span>
         </div>
 
-        <!-- 📊 SCHÉMA SVG DEVOPS -->
         <h2>Schéma DevOps (SVG)</h2>
         <div class="svg-container">
             <svg width="300" height="150">
@@ -97,20 +92,9 @@
             </svg>
         </div>
 
-        <!-- SECTIONS -->
         <section id="devops" class="content-section">
             <h3>DevOps – Le métier qui connecte tout</h3>
             <p>Le DevOps combine développement et opérations...</p>
-        </section>
-
-        <section id="cyber" class="content-section">
-            <h3>Cybersécurité – Les gardiens du numérique</h3>
-            <p>Les experts en cybersécurité protègent...</p>
-        </section>
-
-        <section id="dev" class="content-section">
-            <h3>Développeur – Le créateur d’applications</h3>
-            <p>Le développeur conçoit des sites web...</p>
         </section>
 
     </main>

@@ -1,14 +1,17 @@
 /* MENU LATÉRAL */
 const btn = document.getElementById('btn-menu');
 const menu = document.getElementById('menu');
+const wrapper = document.querySelector('.content-wrapper');
 
 btn.addEventListener('click', () => {
     menu.classList.toggle('open');
+    wrapper.classList.toggle('shifted');
 });
 
-/* NAVIGATION ENTRE SECTIONS */
+/* SCROLL VERS SECTION */
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
 /* MODE SOMBRE / CLAIR */
@@ -18,11 +21,4 @@ themeToggle.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");
     const next = current === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-});
-
-document.querySelectorAll('.coming-soon').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert("Cette section arrive bientôt !");
-    });
 });
