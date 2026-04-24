@@ -16,7 +16,7 @@ body {
     height: 100vh;
 
     /* espace uniforme entre zones */
-    row-gap: 15px;
+    row-gap: 20px;
     padding: 15px; /* espace entre zones et bords */
     box-sizing: border-box;
 }
@@ -29,7 +29,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
 }
 
 /* MENU */
