@@ -88,6 +88,7 @@ aside {
     flex-direction: column;       /* titre + contenu empilés */
     align-items: center;          /* centré horizontalement */
     gap: 10px;                    /* espace entre titre et contenu */
+    padding: 20px;
 }
 
 /* Titre centré */
