@@ -84,8 +84,6 @@ aside {
     margin: 20px auto;            /* centré horizontalement */
     padding: 20px;
     background: #eaeaea;          /* couleur du cadre */
-    border: 1px solid #333;       /* bordure */
-    border-radius: 10px;          /* coins arrondis */
     display: flex;
     flex-direction: column;       /* titre + contenu empilés */
     align-items: center;          /* centré horizontalement */
