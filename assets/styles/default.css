@@ -2,13 +2,11 @@ body {
     margin: 0;
     display: grid;
 
-    /* 4 lignes : header / menu / contenu / footer */
-    grid-template-rows: 80px 60px 1fr 60px;
+    /* 5 lignes : header / menu / contenu / nav / footer */
+    grid-template-rows: 80px 60px 1fr 120px 60px;
 
-    /* 1 colonne */
     grid-template-columns: 1fr;
 
-    /* Définition des zones */
     grid-template-areas:
         "header"
         "menu"
@@ -18,8 +16,10 @@ body {
 
     height: 100vh;
 
-    /* 👉 Ajout de l'espace entre les zones */
-    row-gap: 20px; /* ou gap: 20px; */
+    /* espace blanc entre les zones */
+    row-gap: 20px;
+    padding: 20px; /* espace entre les zones et les bords de l’écran */
+    box-sizing: border-box;
 }
 
 /* HEADER */
@@ -30,7 +30,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; /* centré */
-    padding: 10px 10px;
+    padding: 10px 0px;
 }
 
 /* MENU (barre horizontale) */
@@ -80,16 +80,23 @@ aside {
 
 .nav {
     grid-area: nav;
-    width: 250px;                 /* largeur du cadre */
-    margin: 20px auto;            /* centré horizontalement */
+    background: #eaeaea;
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    /* occupe toute la largeur */
+    width: 100%;
+
+    /* espace interne */
     padding: 20px;
-    background: #eaeaea;          /* couleur du cadre */
+
+    /* contenu centré */
     display: flex;
-    flex-direction: column;       /* titre + contenu empilés */
-    align-items: center;          /* centré horizontalement */
-    gap: 10px;                    /* espace entre titre et contenu */
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
+
 
 /* Titre centré */
 .nav h1 {
@@ -97,13 +104,15 @@ aside {
     text-align: center;
 }
 
+
 /* Ligne contenant flèche + lien + texte */
 .nav p {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 2px;                    /* espace entre les éléments */
+    gap: 10px;
 }
+
 
 /* Style du lien */
 .nav a {
