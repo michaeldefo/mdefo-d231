@@ -32,13 +32,6 @@
         font-size: 12pt;
     }
 
-    /* Afficher l’URL des liens en petit après le texte */
-    a::after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-        color: #555;
-    }
-
     /* Supprimer les couleurs inutiles */
     * {
         background: none !important;
