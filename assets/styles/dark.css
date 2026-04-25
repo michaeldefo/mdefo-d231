@@ -139,3 +139,17 @@ footer {
     background: #1E1E1E;
     box-shadow: 0 2px 6px rgba(255,255,255,0.1);
 }
+
+/* DEVOPS PIPELINE */
+.devops-flow {
+    background: #1e1e1e;
+    border-left-color: #4A90E2;
+}
+
+.devops-flow dt {
+    color: #e6e6e6;
+}
+
+.devops-flow dd {
+    color: #cfcfcf;
+}
