@@ -1,112 +1,134 @@
 /* ===========================
-   DARK MODE
+   DARK MODE — même mise en forme
    =========================== */
 
+/* Fond global sombre + texte clair */
 body {
-    background: #121212;
-    color: #E6E6E6;
+    background: #121212; /* fond sombre */
+    color: #E6E6E6;      /* texte clair */
 }
 
-/* HEADER */
+/* ===========================
+   HEADER
+   =========================== */
+
 header {
-    background: #1E1E1E;
+    background: #1E1E1E; /* même bloc, couleur sombre */
 }
 
 header img {
-    opacity: 0.85;
+    opacity: 0.85; /* meilleure intégration sur fond sombre */
 }
 
-/* MENU */
+
+/* ===========================
+   MENU
+   =========================== */
+
 nav {
-    background: #1E1E1E;
+    background: #1E1E1E; /* même bloc, couleur sombre */
+}
+
+nav ul li {
+    color: #E6E6E6; /* texte clair */
 }
 
 nav ul li a {
-    color: #4A90E2;
+    color: #4A90E2; /* bleu lisible */
 }
 
-/* CONTENU */
+
+
+/* ===========================
+   CONTENU
+   =========================== */
+
 main {
-    background: #1A1A1A;
+    background: #1A1A1A; /* même bloc, couleur sombre */
+    color: #E6E6E6;
 }
 
-/* NAVIGATION INTERNE */
+
+
+/* ===========================
+   NAVIGATION INTERNE
+   =========================== */
+
 .nav {
-    background: #1A1A1A;
+    background: #1A1A1A; /* même bloc, couleur sombre */
+}
+
+.nav h1 {
+    color: #E6E6E6;
 }
 
 .nav a {
     color: #4A90E2;
 }
 
-/* ASIDE */
+
+
+/* ===========================
+   ASIDE
+   =========================== */
+
 aside {
-    background: transparent;
+    background: #1A1A1A; /* même bloc, couleur sombre */
 }
 
-/* REDUCE AND FORMAT ASIDE IMAGE */
 aside img {
-    background: transparent;
-    height: 30px;
-    width: auto;
-    /* FIX CASE DARK BACKGROUND FOR IMAGE*/
-    filter: brightness(1.5);
+    height: 30px;          /* même taille que le light */
+    filter: brightness(1.4); /* rend les logos visibles */
 }
 
-/* FOOTER */
+
+
+/* ===========================
+   FOOTER
+   =========================== */
+
 footer {
-    background: #1E1E1E;
-}
-
-/* TITRES CODE */
-.h1-code, .h2-code {
+    background: #1E1E1E; /* même bloc, couleur sombre */
     color: #E6E6E6;
 }
 
+
+
+/* ===========================
+   TITRES CODE
+   =========================== */
+
+.h1-code, .h2-code {
+    color: #E6E6E6; /* seule la couleur change */
+}
+
+
+
+/* ===========================
+   BOUTON THEME
+   =========================== */
+
 .theme-btn {
-    background: #4A90E2;
-    color: #fff;
+    background: #4A90E2; /* identique */
+    color: #fff;         /* lisible sur fond sombre */
 }
 
-/* ===== CARTES DARK MODE ===== */
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 20px;
-}
+
+/* ===========================
+   CARTES
+   =========================== */
 
 .card {
-    width: 200px;
-    height: 160px;
-    background: var(--card-bg, #fff);
-    border: 1px solid var(--card-border, #ddd);
-    border-radius: 12px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-    color: inherit;
-
-    transition: transform 0.2s ease, background 0.2s ease;
+    --card-bg: #1E1E1E;  /* fond sombre */
+    --card-border: #333; /* bordure sombre */
+    color: #E6E6E6;      /* texte clair */
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    background: #2A2A2A; /* hover adapté */
 }
 
 .card-icon svg {
-    stroke: currentColor;
+    stroke: #E6E6E6; /* icônes visibles */
 }
-
-.card-title {
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
