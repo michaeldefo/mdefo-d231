@@ -32,11 +32,25 @@ body {
 
 header {
     grid-area: header;
-    color: #222;
+    background: repeating-linear-gradient(
+        90deg,
+        #f7f7f7,
+        #f7f7f7 10px,
+        #efefef 10px,
+        #efefef 20px
+    );
+    border-bottom: 2px solid #4a90e2;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+header img {
+    height: 45px;
+    opacity: 0.95;
 }
 
 /* ===========================
