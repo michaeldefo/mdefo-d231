@@ -1,0 +1,60 @@
+/* ===========================
+   DARK MODE
+   =========================== */
+
+body {
+    background: #121212;
+    color: #E6E6E6;
+}
+
+/* HEADER */
+header {
+    background: #1E1E1E;
+}
+
+header img {
+    opacity: 0.85;
+}
+
+/* MENU */
+nav {
+    background: #1E1E1E;
+}
+
+nav ul li a {
+    color: #4A90E2;
+}
+
+/* CONTENU */
+main {
+    background: #1A1A1A;
+}
+
+/* NAVIGATION INTERNE */
+.nav {
+    background: #1A1A1A;
+}
+
+.nav a {
+    color: #4A90E2;
+}
+
+/* ASIDE */
+aside {
+    background: transparent;
+}
+
+/* FOOTER */
+footer {
+    background: #1E1E1E;
+}
+
+/* TITRES CODE */
+.h1-code, .h2-code {
+    color: #E6E6E6;
+}
+
+.theme-btn {
+    background: #4A90E2;
+    color: #fff;
+}

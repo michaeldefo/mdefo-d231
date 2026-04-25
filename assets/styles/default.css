@@ -1,12 +1,11 @@
 /* ===========================
-   LAYOUT GLOBAL
+   LIGHT MODE — DEFAULT
    =========================== */
 
 body {
     margin: 0;
     display: grid;
 
-    /* 6 zones : header / menu / contenu / nav / aside / footer */
     grid-template-rows: 60px 45px 1fr 70px 40px 40px;
     grid-template-columns: 1fr;
 
@@ -20,21 +19,19 @@ body {
 
     height: 100vh;
 
-    /* Espaces uniformes entre les zones */
     row-gap: 12px;
     padding: 12px;
     box-sizing: border-box;
 
-    overflow: hidden; /* empêche le scroll */
+    background: #FAFAFA;
+    color: #222;
+    overflow: hidden;
 }
 
-/* ===========================
-   HEADER
-   =========================== */
-
+/* HEADER */
 header {
     grid-area: header;
-    background: #fafafa; /* sobre, léger */
+    background: #F2F2F2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,23 +41,18 @@ header {
 
 header img {
     height: 40px;
-    width: auto;
     opacity: 0.9;
 }
 
-/* ===========================
-   MENU
-   =========================== */
-
+/* MENU */
 nav {
     grid-area: menu;
-    background: #f4f4f4;
+    background: #F4F4F4;
     padding: 6px 10px;
 }
 
 nav ul {
     display: flex;
-    flex-direction: row;
     gap: 10px;
     list-style: none;
     padding: 0;
@@ -75,24 +67,17 @@ nav ul li {
     font-size: 0.9rem;
 }
 
-/* ===========================
-   CONTENU
-   =========================== */
-
+/* CONTENU */
 main {
     grid-area: content;
     padding: 6px;
-    overflow: hidden; /* empêche le débordement */
+    overflow: hidden;
 }
 
-/* ===========================
-   NAVIGATION INTERNE
-   =========================== */
-
+/* NAVIGATION INTERNE */
 .nav {
     grid-area: nav;
     padding: 6px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,26 +87,21 @@ main {
 .nav h1 {
     margin: 0;
     font-size: 1rem;
-    text-align: center;
 }
 
 .nav p {
     margin: 0;
     display: flex;
-    align-items: center;
     gap: 6px;
 }
 
 .nav a {
     text-decoration: none;
-    color: #222;
+    color: #4A90E2;
     font-weight: bold;
 }
 
-/* ===========================
-   ASIDE
-   =========================== */
-
+/* ASIDE */
 aside {
     grid-area: aside;
     display: flex;
@@ -130,13 +110,9 @@ aside {
     gap: 8px;
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
-
+/* FOOTER */
 footer {
     grid-area: footer;
-    color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,15 +120,22 @@ footer {
     font-size: 0.85rem;
 }
 
-/* ===========================
-   TITRES STYLE "CODE"
-   Sobre, professionnel, éco‑conçu
-   =========================== */
-
+/* TITRES CODE */
 .h1-code, .h2-code {
     font-family: "Source Code Pro", monospace;
     color: #222;
     padding: 4px 8px;
-    width: fit-content;
     margin: 0;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }

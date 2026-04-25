@@ -11,6 +11,7 @@
       <header>
          <img src="/mdefo-d231/assets/images/DevOps_medium.png" alt="logo DevOps">
          <h1 class="h1-code">🎯 Collaborer & apprendre le DevOps avec Michael D.</h1>
+         <button onclick="toggleTheme()" class="theme-btn">🌙 Mode sombre</button>
       </header>
       
       <!-- MENU -->
@@ -61,3 +62,15 @@
 
    </body>
 </html>
+
+<script>
+function toggleTheme() {
+    const link = document.getElementById("theme");
+
+    if (link.getAttribute("href").includes("default.css")) {
+        link.setAttribute("href", "/mdefo-d231/assets/styles/dark.css");
+    } else {
+        link.setAttribute("href", "/mdefo-d231/assets/styles/default.css");
+    }
+}
+</script>
