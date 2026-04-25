@@ -77,19 +77,19 @@ main {
 }
 
 /* NAVIGATION INTERNE */
+/* NAVIGATION INTERNE — ergonomique, en bas à droite */
 .nav {
-    position: sticky;       /* se détache de la grille */
-    bottom: 20px;          /* marge bas */
-    right: 20px;           /* marge droite */
-    background: #F2F2F2;   /* même style que ton thème clair */
-    padding: 10px 14px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    display: flex-end;
-    flex-direction: column;
-    gap: 6px;
-    z-index: 999;          /* reste au-dessus du contenu */
-    bottom: 0;
+    position: fixed;        /* reste visible même en scrollant */
+    bottom: 20px;           /* distance du bas */
+    right: 20px;            /* distance de la droite */
+    background: none;       /* pas de cadre */
+    padding: 0;             /* pas de padding */
+    border-radius: 0;       /* pas d'arrondi */
+    box-shadow: none;       /* pas d'ombre */
+    display: flex;          /* flex normal */
+    flex-direction: column; /* éléments empilés */
+    gap: 6px;               /* espace entre les liens */
+    z-index: 999;           /* toujours au-dessus du contenu */
 }
 
 
