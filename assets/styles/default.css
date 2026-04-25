@@ -78,11 +78,12 @@ main {
 
 /* NAVIGATION INTERNE — en bas de <main>, alignée à droite */
 .nav-in-main {
+    width: 100%;                 /* occupe toute la largeur */
     display: flex;
-    justify-content: flex-end; /* aligne à droite */
-    margin-top: 40px;          /* espace avant la navigation */
+    justify-content: flex-end;   /* aligne à droite */
+    margin-top: 40px;            /* espace avant la navigation */
     padding: 10px 0;
-    background: none;          /* pas de cadre */
+    background: none;
 }
 
 .nav-in-main p {
