@@ -80,7 +80,7 @@ main {
 .nav {
     position: sticky;       /* reste visible dans <main> */
     bottom: 0;              /* colle au bas de la zone visible */
-    align-self: flex-end;   /* se place à droite dans la grille */
+    justify-self: end;      /* se place à droite dans la grille */
     margin-top: auto;       /* pousse vers le bas */
     background: none;       /* pas de cadre */
     padding: 0;
@@ -89,7 +89,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    /*z-index: 10;*/            /* reste au-dessus du contenu */
 }
 
 .nav h1 {
