@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <title>Parlons DevOps avec Michael D.</title>
       <link id="theme" rel="stylesheet" href="/mdefo-d231/assets/styles/default.css">
+      <link rel="stylesheet" href="assets/styles/dark.css" id="dark-theme" disabled>
    </head>
    <body>
 
@@ -121,15 +122,9 @@
 </html>
 
 <script>
+   // CSS override for dark mode
    function toggleTheme() {
-
-      //ACT ON ELEMENT WITH ID="THEME"
-      const link = document.getElementById("theme");
-
-      if (link.getAttribute("href").includes("default.css")) {
-          link.setAttribute("href", "/mdefo-d231/assets/styles/dark.css");
-      } else {
-           link.setAttribute("href", "/mdefo-d231/assets/styles/default.css");
-      }
-}
+      const darkLink = document.getElementById('dark-theme');
+       darkLink.disabled = !darkLink.disabled;
+   }
 </script>
