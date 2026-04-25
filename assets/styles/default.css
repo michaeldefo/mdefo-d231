@@ -76,37 +76,28 @@ main {
     overflow-y: auto;
 }
 
-/* NAVIGATION INTERNE */
-.nav {
-    position: sticky;       /* reste visible dans <main> */
-    bottom: 0;              /* colle au bas de la zone visible */
-    justify-self: end;      /* se place à droite dans la grille */
-    margin-top: auto;       /* pousse vers le bas */
-    background: none;       /* pas de cadre */
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
+/* NAVIGATION INTERNE — en bas de <main>, alignée à droite */
+.nav-in-main {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    justify-content: flex-end; /* aligne à droite */
+    margin-top: 40px;          /* espace avant la navigation */
+    padding: 10px 0;
+    background: none;          /* pas de cadre */
 }
 
-.nav h1 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.nav p {
+.nav-in-main p {
     margin: 0;
     display: flex;
-    gap: 6px;
+    align-items: center;
+    gap: 10px;
 }
 
-.nav a {
+.nav-in-main a {
     text-decoration: none;
     color: #4A90E2;
     font-weight: bold;
 }
+
 
 /* ASIDE */
 aside {

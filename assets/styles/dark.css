@@ -53,16 +53,15 @@ main {
 /* ===========================
    NAVIGATION INTERNE
    =========================== */
-
-.nav {
+.nav-in-main {
     background: #1A1A1A; /* même bloc, couleur sombre */
 }
 
-.nav h1 {
+.nav-in-main h1 {
     color: #E6E6E6;
 }
 
-.nav a {
+.nav-in-main a {
     color: #4A90E2;
 }
 
@@ -137,7 +136,7 @@ footer {
 /* ===========================
    NAVIGATION 
    =========================== */
-.nav {
+.nav-in-main  {
     background: #1E1E1E;
     box-shadow: 0 2px 6px rgba(255,255,255,0.1);
 }
