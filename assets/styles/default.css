@@ -89,7 +89,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    z-index: 10;            /* reste au-dessus du contenu */
+    /*z-index: 10;*/            /* reste au-dessus du contenu */
 }
 
 .nav h1 {
