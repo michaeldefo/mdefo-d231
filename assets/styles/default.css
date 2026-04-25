@@ -78,26 +78,36 @@ main {
 
 /* NAVIGATION INTERNE — en bas de <main>, alignée à droite */
 .nav-in-main {
-    width: 100%;                 /* occupe toute la largeur */
+    width: 100%;
     display: flex;
-    justify-content: flex-end;   /* aligne à droite */
-    margin-top: 40px;            /* espace avant la navigation */
+    flex-direction: column;      /* colonne : titre puis liens */
+    align-items: flex-end;       /* aligné à droite */
+    margin-top: 40px;
     padding: 10px 0;
     background: none;
+    gap: 8px;                    /* espace entre h3 et p */
 }
 
+/* Nouveau style du titre */
+.nav-in-main h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color, #4A90E2);
+    padding-bottom: 3px;
+    border-bottom: 2px solid currentColor; /* ligne fine, éco‑conçue */
+    width: fit-content;
+}
+
+/* Ligne des liens */
 .nav-in-main p {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    font-size: 0.95rem;
 }
 
-.nav-in-main a {
-    text-decoration: none;
-    color: #4A90E2;
-    font-weight: bold;
-}
 
 
 /* ASIDE */
