@@ -1,0 +1,47 @@
+/* THEME D’IMPRESSION */
+@media print {
+
+    /* Masquer toutes les zones inutiles */
+    header,
+    nav,
+    aside,
+    .theme-btn,
+    .menu,
+    .nav-in-main {
+        display: none !important;
+    }
+
+    /* Afficher uniquement main + footer */
+    main,
+    footer {
+        display: block !important;
+    }
+
+    /* Nettoyage du layout */
+    body {
+        margin: 0;
+        padding: 0;
+        background: white !important;
+    }
+
+    /* Rendre le contenu lisible */
+    main {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 12pt;
+    }
+
+    /* Afficher l’URL des liens en petit après le texte */
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #555;
+    }
+
+    /* Supprimer les couleurs inutiles */
+    * {
+        background: none !important;
+        box-shadow: none !important;
+    }
+}
