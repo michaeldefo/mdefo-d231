@@ -105,10 +105,23 @@ footer {
     padding: 10px;
 }
 
-/* ASIDE (si tu veux l'utiliser plus tard) */
+/* ASIDE */
 aside {
     grid-area: aside;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* TITRE EN MODE CODE  */
+.h1-code, .h2-code {
+    font-family: "Source Code Pro", monospace;
+    background: linear-gradient(90deg, #0d1117, #1f2937);
+    color: #58a6ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    width: fit-content;
+    text-shadow: 0 0 4px rgba(88,166,255,0.6);
 }
