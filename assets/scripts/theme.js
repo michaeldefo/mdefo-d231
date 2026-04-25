@@ -1,9 +1,3 @@
-// Activate dark mode by override default.css with dark mode css
-/*function toggleTheme() {
-    const darkLink = document.getElementById('dark-theme');
-    darkLink.disabled = !darkLink.disabled;
-}*/
-
 // Active ou désactive le thème sombre + sauvegarde
 function toggleTheme() {
     const darkLink = document.getElementById('dark-theme');
@@ -21,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     const darkLink = document.getElementById('dark-theme');
 
+    // Désactive par défaut (HTML valide W3C)
+    darkLink.disabled = true;
+
     if (savedTheme === "dark") {
         darkLink.disabled = false;   // active dark.css
-    } else {
-        darkLink.disabled = true;    // active default.css
     }
 });
