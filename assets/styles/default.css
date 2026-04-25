@@ -87,6 +87,7 @@ nav ul li {
 main {
     grid-area: content;
     padding: 10px;
+    align-content: normal;
 }
 
 /* ===========================
@@ -96,7 +97,7 @@ main {
 .nav {
     grid-area: nav;
     background: #eaeaea;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     padding: 10px;
 
     display: flex;
