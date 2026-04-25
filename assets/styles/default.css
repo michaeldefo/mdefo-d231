@@ -25,7 +25,7 @@ body {
 /* HEADER */
 header {
     grid-area: header;
-    background: #333;
+    /*background: #333;*/
     color: white;
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@ main {
 /* FOOTER */
 footer {
     grid-area: footer;
-    background: #333;
+    /*background: #333;*/
     color: white;
     display: flex;
     align-items: center;
