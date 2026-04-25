@@ -37,6 +37,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
       "Email : " + mailUser + "%0D%0A%0D%0A" +
       "Sujet(s) choisi(s) :%0D%0A- " + messageGenere + "%0D%0A";
 
+ // Ouvre l'outil de mail sur le poste client 
   window.location.href =
       "mailto:" + decodedMail + "?subject=" + subject + "&body=" + body;
 });
