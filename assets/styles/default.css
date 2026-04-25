@@ -7,7 +7,7 @@ body {
     display: grid;
 
     /* 6 zones : header / menu / contenu / nav / aside / footer */
-    grid-template-rows: 70px 50px 1fr 90px 50px 50px;
+    grid-template-rows: 60px 45px 1fr 70px 40px 40px;
     grid-template-columns: 1fr;
 
     grid-template-areas:
@@ -20,10 +20,12 @@ body {
 
     height: 100vh;
 
-    /* Espaces uniformes */
-    row-gap: 15px;
-    padding: 15px;
+    /* Espaces uniformes entre les zones */
+    row-gap: 12px;
+    padding: 12px;
     box-sizing: border-box;
+
+    overflow: hidden; /* empêche le scroll */
 }
 
 /* ===========================
@@ -32,25 +34,18 @@ body {
 
 header {
     grid-area: header;
-    background: repeating-linear-gradient(
-        90deg,
-        #f7f7f7,
-        #f7f7f7 10px,
-        #efefef 10px,
-        #efefef 20px
-    );
-    border-bottom: 2px solid #4a90e2;
-
+    background: #fafafa; /* sobre, léger */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    padding: 10px 20px;
+    gap: 12px;
+    padding: 8px 12px;
 }
 
 header img {
-    height: 45px;
-    opacity: 0.95;
+    height: 40px;
+    width: auto;
+    opacity: 0.9;
 }
 
 /* ===========================
@@ -60,13 +55,13 @@ header img {
 nav {
     grid-area: menu;
     background: #f4f4f4;
-    padding: 10px;
+    padding: 6px 10px;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 10px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -75,9 +70,9 @@ nav ul {
 nav ul li {
     display: flex;
     align-items: center;
-    gap: 6px; /* espace icône / texte */
+    gap: 6px;
     white-space: nowrap;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* ===========================
@@ -86,8 +81,8 @@ nav ul li {
 
 main {
     grid-area: content;
-    padding: 10px;
-    align-content: normal;
+    padding: 6px;
+    overflow: hidden; /* empêche le débordement */
 }
 
 /* ===========================
@@ -96,19 +91,17 @@ main {
 
 .nav {
     grid-area: nav;
-    background: #eaeaea;
-    /*border: 1px solid #ccc;*/
-    padding: 10px;
+    padding: 6px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
 }
 
 .nav h1 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -116,7 +109,7 @@ main {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .nav a {
@@ -134,7 +127,7 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 /* ===========================
@@ -147,21 +140,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 6px;
+    font-size: 0.85rem;
 }
 
 /* ===========================
    TITRES STYLE "CODE"
-   Éco‑conçu, sobre, professionnel
+   Sobre, professionnel, éco‑conçu
    =========================== */
 
 .h1-code, .h2-code {
     font-family: "Source Code Pro", monospace;
-    background: #f2f2f2;
     color: #222;
-    padding: 6px 10px;
-    border-left: 4px solid #4a90e2;
-    border-radius: 4px;
+    padding: 4px 8px;
     width: fit-content;
     margin: 0;
 }
