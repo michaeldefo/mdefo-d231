@@ -4,41 +4,48 @@
       <meta charset="utf-8">
       <link rel="icon" type="image/png" href="/mdefo-d231/assets/images/logo.png">
       <title>Qui est Michael D. ?</title>
+      <link id="theme" rel="stylesheet" href="/mdefo-d231/assets/styles/default.css">
+      <link rel="stylesheet" href="assets/styles/dark.css" id="dark-theme" disabled>
+      <script src="/mdefo-d231/assets/scripts/theme.js"></script>
    </head>
 
    <body>
+      <!-- ENTETE -->
       <header>
-         <img src="/mdefo-d231/assets/images/MasqueTribalDevopsS.png" alt="logo">
-         <img src="/mdefo-d231/assets/images/DevOps_medium.png" alt="logo">
-         <img src="/mdefo-d231/assets/images/MasqueTribalDevopsS.png" alt="logo">
-         <class="h1-code">🎯Parlons DevOps avec Michael D.</h1>
-      </header>  
+         <img src="/mdefo-d231/assets/images/DevOps_medium.png" alt="logo DevOps">
+         <h1 class="h1-code">🎯 Echanger, Collaborer, Apprendre sur le DevOps avec Michael D.</h1>
+         <button onclick="toggleTheme()" class="theme-btn">🌙 Theme</button>
+      </header>
       
-      <nav>
-         <header> 
-            <h2> 🔄 DevOps : Commencer l’exploration</h2>
-         </header>
+      <!-- MENU -->
+      <nav class="menu">
          <ul>
-            <li><a href="/mdefo-d231/content/home.html">À propos de moi</a></li>
-            <li><a href="/mdefo-d231/content/notions.html">Comprendre le DevOps</a></li>
-            <li><a href="/mdefo-d231/content/metiers.html">Qui peut faire du DevOps ?</a></li>
-			<!--li><a href="reflexion.html">DevOps: Finalement on en fait quoi...</a></li-->
-            <li><a href="/mdefo-d231/content/contact.html">Contact</a></li>
+            <li>🏠 <a href="/mdefo-d231/index.html">Acceuil</a></li>
+            <li>👤 <a href="/mdefo-d231/content/home.html">À propos de moi</a></li>
+            <li>🔧 <a href="/mdefo-d231/content/notions.html">Comprendre le DevOps</a></li>
+            <li>👥 <a href="/mdefo-d231/content/metiers.html">Qui peut faire du DevOps ?</a></li>
+            <li>✉️ <a href="/mdefo-d231/content/contact.html">Contact</a></li>
          </ul>
       </nav>
 
-      <article>
-         <header>
-            <h3>Parlons de Michael D. C'est moi</h3>
+      <!-- MAIN SECTION -->
+      <main>
+         
+         <header> 
+            <h2 class="h2-code"> 👤 À propos de moi</h2>
+         </header>
+
+         <section>
+            <h2>Parlons de Michael D. C'est moi</h2>
             <p>
                Je suis camerounais. Je viens du Cameroun le pays de Samuel Eto'o et de Roger Milla.
                Le Cameroun est situé en Afrique Centrale. On le qualifie d'Afrique en miniature.
                Tu sais d'où je viens, maintenant parlons de moi.
             </p>
-         </header>
+         </section>
 
          <section>
-            <h3>Mon parcours académique</h3>
+            <h2>Mon parcours académique</h2>
             <ul>
                <li>Enseignement primaire de la SIL au CM2 au Cameroun</li>
                <li>Enseignement secondaire de la 6eme en Terminale au Cameroun</li>
@@ -47,7 +54,7 @@
          </section>
 
          <section>
-            <h3>Mon parcours proffesionnel</h3>
+            <h2>Mon parcours proffesionnel</h2>
             <p>
                Fort d’une solide expérience en production et gestion du changement (ITIL/DSI), 
                j’ai fait évoluer mon expertise d’Ingénieur Intégration & OPS vers la culture DevOps. 
@@ -77,14 +84,20 @@
          </section>
 
          <section>
-            <h3>Hummm.....</h3>
+            <h2>Hummm.....</h2>
             <p>Je continue de réfléchir</p>
             <a href="/mdefo-d231/index.html" Acceuil></a>
          </section>
+         
+         <aside>
+            <img src="/mdefo-d231/assets/images/DevOps_iconS.png" alt="Boucle d'amélioration continue">
+            <img src="/mdefo-d231/assets/images/valid-xhtml11.png" alt="HTML5 compliant">
+         </aside>  
 
-      </article>     
+      </main>     
 
-      <section>
+      /* MENU POUR NAVIGUER INCLUS*/
+      <!--section>
          <h2>⬅️ ➡️Navigation</h2>
          <p>
             <b>⬅️</b>
@@ -95,19 +108,14 @@
             <a href="/mdefo-d231/content/notions.html">Suite</a>
             <b>Suite</b>
          </p>
-      </section>
+      </section-->
 
-      <aside>
-         <img src="/mdefo-d231/assets/images/DevOps_iconS.png" alt="Boucle d'amélioration continue">
-         <img src="/mdefo-d231/assets/images/valid-xhtml11.png" alt="HTML5 compliant">
-      </aside>  
-
+      <!-- PIED DE PAGE -->
       <footer>
-         <p>Copyright Michael D. 2026.</p>
+         <p>© 2026 — Michael D. | DevOps & Partage</p>
       </footer>
 
    </body>
-
 </html>
 
  

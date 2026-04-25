@@ -3,116 +3,70 @@
    <head>
       <meta charset="utf-8">
       <title>📩 Me contacter</title>
+      <link id="theme" rel="stylesheet" href="/mdefo-d231/assets/styles/default.css">
+      <link rel="stylesheet" href="assets/styles/dark.css" id="dark-theme" disabled>
+      <script src="/mdefo-d231/assets/scripts/theme.js"></script>
+      <script src="/mdefo-d231/assets/scripts/contact.js"></script>
    </head>
    <body>
+      <!-- ENTETE -->
       <header>
-         <img src="/mdefo-d231/assets/images/MasqueTribalDevopsS.png" alt="logo">
-         <img src="/mdefo-d231/assets/images/DevOps_medium.png" alt="logo">
-         <img src="/mdefo-d231/assets/images/MasqueTribalDevopsS.png" alt="logo">
-         <class="h1-code">🎯Parlons DevOps avec Michael D.</h1>
+         <img src="/mdefo-d231/assets/images/DevOps_medium.png" alt="logo DevOps">
+         <h1 class="h1-code">🎯 Echanger, Collaborer, Apprendre sur le DevOps avec Michael D.</h1>
+         <button onclick="toggleTheme()" class="theme-btn">🌙 Theme</button>
       </header>
-      
-      <nav>
-         <header> 
-            <h2> 🔄 DevOps : Commencer l’exploration</h2>
-         </header>
+
+      <!-- MENU -->
+      <nav class="menu">
          <ul>
-            <li><a href="/mdefo-d231/content/home.html">À propos de moi</a></li>
-            <li><a href="/mdefo-d231/content/notions.html">Comprendre le DevOps</a></li>
-            <li><a href="/mdefo-d231/content/metiers.html">Qui peut faire du DevOps ?</a></li>
-			<!--li><a href="reflexion.html">DevOps: Finalement on en fait quoi...</a></li-->
-            <li><a href="/mdefo-d231/content/contact.html">Contact</a></li>
+            <li>🏠 <a href="/mdefo-d231/index.html">Acceuil</a></li>
+            <li>👤 <a href="/mdefo-d231/content/home.html">À propos de moi</a></li>
+            <li>🔧 <a href="/mdefo-d231/content/notions.html">Comprendre le DevOps</a></li>
+            <li>👥 <a href="/mdefo-d231/content/metiers.html">Qui peut faire du DevOps ?</a></li>
+            <li>✉️ <a href="/mdefo-d231/content/contact.html">Contact</a></li>
          </ul>
       </nav>
-<body>
-
-<h2>📩 Me contacter</h2>
-
-<form id="contactForm">
-
-   <label for="name">Nom :</label><br>
-   <input type="text" id="name" required><br><br>
-
-   <label for="email">Votre email :</label><br>
-   <input type="email" id="email" required><br><br>
-
-   <h3>📌 Sujet(s) de votre message :</h3>
-
-   <label><input type="checkbox" name="choix" value="Je souhaite en savoir plus sur le DevOps (Partage de sources et ressources, Echanges)"> En savoir plus sur le DevOps</label><br>
-   <label><input type="checkbox" name="choix" value="Je veux comprendre les métiers DevOps du point de vue de votre parcours."> Echange sur les Métiers DevOps</label><br>
-   <label><input type="checkbox" name="choix" value="Je recherche une assistance ou un accompagnement technique (mentoring ou entraide)."> Explorer la possibilité de mentoring ou entraide</label><br>
-   <label><input type="checkbox" name="choix" value="Je veux collaborer ou proposer un projet."> Explorer des pistes de collaboration</label><br>
-   <label><input type="checkbox" name="choix" value="Je veux corriger une section du site."> Collaboration: Revue contenu/Correction</label><br>
-   <label><input type="checkbox" name="choix" value="Je veux en savoir plus sur votre parcours."> Echanger sur Votre parcours </label><br><br>
-   
-   <button type="submit">Envoyer</button>
-
-</form>
-
-<script>
-// --- Fonction ROT13 ---
-function rot13(str) {
-  return str.replace(/[a-zA-Z]/g, function(c){
-    return String.fromCharCode(
-      (c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13)
-      ? c : c - 26
-    );
-  });
-}
-
-// Email chiffré ROT13 (dtmghislain@gmail.com)
-const encryptedMail = "qgztuvfyvna@tznvy.pbz";
-const decodedMail = rot13(encryptedMail);
-
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const nom = encodeURIComponent(document.getElementById("name").value);
-  const mailUser = encodeURIComponent(document.getElementById("email").value);
-
-  // Récupération des checkbox cochées
-  const checkboxes = document.querySelectorAll('input[name="choix"]:checked');
-  let selected = [];
-
-  checkboxes.forEach(cb => selected.push(cb.value));
-
-  // Génération automatique du message final
-  const messageGenere =
-      selected.length > 0
-      ? selected.join("%0D%0A- ")    
-      : "Aucun sujet sélectionné.";
-
-  const subject = encodeURIComponent("Contact depuis le site DevOps de Michael D.");
-
-  const body =
-      "Nom : " + nom + "%0D%0A" +
-      "Email : " + mailUser + "%0D%0A%0D%0A" +
-      "Sujet(s) choisi(s) :%0D%0A- " + messageGenere + "%0D%0A";
-
-  window.location.href =
-      "mailto:" + decodedMail + "?subject=" + subject + "&body=" + body;
-});
-</script>
-
-      <section>
-         <h2>⬅️ ➡️Navigation</h2>
-         <p>
-            <b>⬅️</b>
-            <a href="/mdefo-d231/content/metiers.html">Retour</a>
-            <b>Retour</b>
-            <b>&emsp;&emsp;</b>
-            <b>➡️</b>
-            <a href="/mdefo-d231/index.html">Acceuil</a>
-            <b>Suite</b>
-         </p>
-      </section>
-     <aside>
-         <img src="/mdefo-d231/assets/images/DevOps_iconS.png" alt="Boucle d'amélioration continue">
-         <img src="/mdefo-d231/assets/images/valid-xhtml11.png" alt="HTML5 compliant">
-      </aside>  
-
+      
+      <!-- MAIN SECTION -->
+      <main>
+         <header> 
+            <h2 class="h2-code"> 📩 Me contacter</h2>
+         </header>
+         <form id="contactForm">
+            <label for="name">Nom :</label><br>
+            <input type="text" id="name" required><br><br>
+            <label for="email">Votre email :</label><br>
+            <input type="email" id="email" required><br><br>
+            <h3>📌 Sujet(s) de votre message :</h3>
+            <label><input type="checkbox" name="choix" value="Je souhaite en savoir plus sur le DevOps (Partage de sources et ressources, Echanges)"> En savoir plus sur le DevOps</label><br>
+            <label><input type="checkbox" name="choix" value="Je veux comprendre les métiers DevOps du point de vue de votre parcours."> Echange sur les Métiers DevOps</label><br>
+            <label><input type="checkbox" name="choix" value="Je recherche une assistance ou un accompagnement technique (mentoring ou entraide)."> Explorer la possibilité de mentoring ou entraide</label><br>
+            <label><input type="checkbox" name="choix" value="Je veux collaborer ou proposer un projet."> Explorer des pistes de collaboration</label><br>
+            <label><input type="checkbox" name="choix" value="Je veux corriger une section du site."> Collaboration: Revue contenu/Correction</label><br>
+            <label><input type="checkbox" name="choix" value="Je veux en savoir plus sur votre parcours."> Echanger sur Votre parcours </label><br><br>
+            <button type="submit">Envoyer</button>
+         </form>
+         <section>
+            <h2>⬅️ ➡️Navigation</h2>
+            <p>
+               <b>⬅️</b>
+               <a href="/mdefo-d231/content/metiers.html">Retour</a>
+               <b>Retour</b>
+               <b>&emsp;&emsp;</b>
+               <b>➡️</b>
+               <a href="/mdefo-d231/index.html">Acceuil</a>
+               <b>Suite</b>
+            </p>
+         </section>
+         <aside>
+            <img src="/mdefo-d231/assets/images/DevOps_iconS.png" alt="Boucle d'amélioration continue">
+            <img src="/mdefo-d231/assets/images/valid-xhtml11.png" alt="HTML5 compliant">
+         </aside>
+      </main>
+      
+      <!-- PIED DE PAGE -->
       <footer>
-         <p>Copyright Michael D. 2026.</p>
+         <p>© 2026 — Michael D. | DevOps & Partage</p>
       </footer>
 
    </body>
