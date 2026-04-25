@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <title>Parlons DevOps avec Michael D.</title>
-      <link rel="stylesheet" href="/mdefo-d231/assets/styles/default.css">
+      <link id="theme" rel="stylesheet" href="/mdefo-d231/assets/styles/default.css">
    </head>
    <body>
 
@@ -11,7 +11,7 @@
       <header>
          <img src="/mdefo-d231/assets/images/DevOps_medium.png" alt="logo DevOps">
          <h1 class="h1-code">🎯 Echanger, Collaborer, Apprendre sur le DevOps avec Michael D.</h1>
-         <button onclick="toggleTheme()" class="theme-btn">🌙 Mode sombre</button>
+         <button onclick="toggleTheme()" class="theme-btn">🌙 Theme</button>
       </header>
       
       <!-- MENU -->
@@ -121,13 +121,15 @@
 </html>
 
 <script>
-function toggleTheme() {
-    const link = document.getElementById("theme");
+   function toggleTheme() {
 
-    if (link.getAttribute("href").includes("default.css")) {
-        link.setAttribute("href", "/mdefo-d231/assets/styles/dark.css");
-    } else {
-        link.setAttribute("href", "/mdefo-d231/assets/styles/default.css");
-    }
+      //ACT ON ELEMENT WITH ID="THEME"
+      const link = document.getElementById("theme");
+
+      if (link.getAttribute("href").includes("default.css")) {
+          link.setAttribute("href", "/mdefo-d231/assets/styles/dark.css");
+      } else {
+           link.setAttribute("href", "/mdefo-d231/assets/styles/default.css");
+      }
 }
 </script>

@@ -49,8 +49,9 @@ aside img {
     background: transparent;
     height: 30px;
     width: auto;
+    /* FIX CASE DARK BACKGROUND FOR IMAGE*/
+    filter: brightness(1.5);
 }
-
 
 /* FOOTER */
 footer {

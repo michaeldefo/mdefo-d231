@@ -71,7 +71,9 @@ nav ul li {
 main {
     grid-area: content;
     padding: 6px;
-    overflow: hidden;
+    /*overflow: hidden;/*
+    /* FIX CASE WHERE SOME ITEM MAY BE INSVISIBLE*/
+    overflow-y: auto;
 }
 
 /* NAVIGATION INTERNE */
