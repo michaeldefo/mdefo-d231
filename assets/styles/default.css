@@ -78,17 +78,18 @@ main {
 
 /* NAVIGATION INTERNE */
 .nav {
-    position: fixed;       /* se détache de la grille */
+    position: sticky;       /* se détache de la grille */
     bottom: 20px;          /* marge bas */
     right: 20px;           /* marge droite */
     background: #F2F2F2;   /* même style que ton thème clair */
     padding: 10px 14px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    display: flex;
+    display: flex-end;
     flex-direction: column;
     gap: 6px;
     z-index: 999;          /* reste au-dessus du contenu */
+    bottom: 0;
 }
 
 
