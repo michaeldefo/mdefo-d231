@@ -1,9 +1,13 @@
+/* ===========================
+   LAYOUT GLOBAL
+   =========================== */
+
 body {
     margin: 0;
     display: grid;
 
-    /* 5 lignes : header / menu / contenu / nav / footer */
-    grid-template-rows: 70px 50px 1fr 100px 50px;
+    /* 6 zones : header / menu / contenu / nav / aside / footer */
+    grid-template-rows: 70px 50px 1fr 90px 50px 50px;
     grid-template-columns: 1fr;
 
     grid-template-areas:
@@ -16,24 +20,29 @@ body {
 
     height: 100vh;
 
-    /* espace uniforme entre zones */
-    row-gap: 20px;
-    padding: 15px; /* espace entre zones et bords */
+    /* Espaces uniformes */
+    row-gap: 15px;
+    padding: 15px;
     box-sizing: border-box;
 }
 
-/* HEADER */
+/* ===========================
+   HEADER
+   =========================== */
+
 header {
     grid-area: header;
-    /*background: #333;*/
-    color: white;
+    color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 10px;
 }
 
-/* MENU */
+/* ===========================
+   MENU
+   =========================== */
+
 nav {
     grid-area: menu;
     background: #f4f4f4;
@@ -43,41 +52,48 @@ nav {
 nav ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 12px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* espace icône / texte */
     white-space: nowrap;
+    font-size: 0.95rem;
 }
 
-/* CONTENU */
+/* ===========================
+   CONTENU
+   =========================== */
+
 main {
     grid-area: content;
     padding: 10px;
 }
 
-/* NAVIGATION (cadre pleine largeur) */
+/* ===========================
+   NAVIGATION INTERNE
+   =========================== */
+
 .nav {
     grid-area: nav;
     background: #eaeaea;
-    border: 1px solid #333;
-    /*border-radius: 8px;*/
-
-    /*width: 100%;*/
+    border: 1px solid #ccc;
     padding: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
 }
 
 .nav h1 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -90,38 +106,47 @@ main {
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: #222;
     font-weight: bold;
 }
 
-/* FOOTER */
+/* ===========================
+   ASIDE
+   =========================== */
+
+aside {
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
 footer {
     grid-area: footer;
-    /*background: #333;*/
-    color: white;
+    color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
 }
 
-/* ASIDE */
-aside {
-    grid-area: aside;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ===========================
+   TITRES STYLE "CODE"
+   Éco‑conçu, sobre, professionnel
+   =========================== */
 
-
-/* TITRE EN MODE CODE  */
 .h1-code, .h2-code {
     font-family: "Source Code Pro", monospace;
-    background: linear-gradient(90deg, #0d1117, #1f2937);
-    color: #58a6ff;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #30363d;
+    background: #f2f2f2;
+    color: #222;
+    padding: 6px 10px;
+    border-left: 4px solid #4a90e2;
+    border-radius: 4px;
     width: fit-content;
-    text-shadow: 0 0 4px rgba(88,166,255,0.6);
+    margin: 0;
 }
