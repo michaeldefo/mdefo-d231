@@ -44,6 +44,14 @@ aside {
     background: transparent;
 }
 
+/* REDUCE AND FORMAT ASIDE IMAGE */
+aside img {
+    background: transparent;
+    height: 30px;
+    width: auto;
+}
+
+
 /* FOOTER */
 footer {
     background: #1E1E1E;
